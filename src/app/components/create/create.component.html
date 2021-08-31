@@ -1,0 +1,42 @@
+<div class="box">
+    <h1>{{title}}</h1>
+    <div class='OK' *ngIf="flag == 1">
+        <h4>El proyecto se ha creado correctamente</h4>
+    </div>
+    <div class='NOK' *ngIf="flag == 0">
+        <h4>Error al crear el proyecto</h4>
+    </div>
+    <form class='proyectForm' #proyectForm='ngForm' (ngSubmit)='onSubmit(proyectForm)'>
+        <p>
+            <label for="name">Nombre:</label><br>
+            <input type="text" name="name" #name="ngModel" [(ngModel)]="proyect.name" required>
+            <span class='valid' *ngIf="name.touched && !name.valid">*</span>
+        </p>
+        <p>
+            <label for="category">Categoria:</label><br>
+            <input type="text" name="category" #category="ngModel" [(ngModel)]="proyect.category" required>
+            <span class='valid' *ngIf="category.touched && !category.valid">*</span>
+        </p>
+        <p>
+            <label for="year">Año:</label><br>
+            <input type="number" name="year" #year="ngModel" [(ngModel)]="proyect.year" required>
+            <span class='valid' *ngIf="year.touched && !year.valid">*</span>
+        </p>
+        <p>
+            <label for="langs">Lenguajes:</label><br>
+            <input type="text" name="langs" #langs="ngModel" [(ngModel)]="proyect.langs" required>
+            <span class='valid' *ngIf="langs.touched && !langs.valid">*</span>
+        </p>
+        <p>
+            <label for="description">Descripcion:</label><br>
+            <input type="text" name="description" #description="ngModel" [(ngModel)]="proyect.description" required>
+            <span class='valid' *ngIf="description.touched && !description.valid">*</span>
+        </p>
+        <p>
+            <label for="image">Imagen:</label>
+            <input class='file' type="file" name="image" #image="ngModel" [(ngModel)]="proyect.image" (change)="fileChangeEvent($event)" required>
+        </p>
+
+        <input type="submit" value="Enviar" [disabled]="!proyectForm.form.valid">
+    </form>
+</div>

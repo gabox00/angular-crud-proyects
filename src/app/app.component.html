@@ -1,0 +1,21 @@
+  <header>
+      <ul class="nav">
+        <li><a [routerLink]="['/sobre-mi']" [routerLinkActive]="['actived']">Sobre mi</a></li>
+        <li><a [routerLink]="['/proyectos']" [routerLinkActive]="['actived']">Proyectos</a></li>
+        <li class="logo"><a [routerLink]="['/sobre-mi']">Inicio</a></li>
+        <li><a [routerLink]="['/crear/proyecto']" [routerLinkActive]="['actived']">Nuevo Proyecto</a></li>
+        <li><a [routerLink]="['/contacto']" [routerLinkActive]="['actived']">Contacto</a></li>
+      </ul>
+  </header>
+
+<main class="main">
+  <div class="container">
+    <div class="center">
+      <router-outlet></router-outlet>
+    </div> 
+  </div>
+</main>
+
+<footer class="footer">
+  Gabogutz &copy
+</footer>

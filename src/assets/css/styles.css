@@ -1,0 +1,263 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #e8e6e8;
+}
+
+header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+
+.nav{
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    background: steelblue;
+    list-style: none;
+}
+
+.nav li{
+    flex: auto;
+    text-align: center;
+    box-shadow: 0px 2px 0px 0px #175282;
+}
+
+.nav a{
+    display: block;
+    color: #eee;
+    text-decoration: none;
+    line-height: 3;
+    font-size: 1em;
+}
+
+.nav a:hover,
+    .actived{
+        transition: 1s;
+        background: #175282;
+    }
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    background: #eee;
+    min-height: 1000px;
+    margin-top: 3em;
+}
+
+.center{
+    margin: 0em 6em;
+}
+
+.main .container .center h1{
+    padding-top: 1.5em;
+}
+
+.box h1{
+    text-align: center;
+    font-size: 60px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.box h2{
+    text-align: center;
+    font-size: 2rem;
+}
+.box h3{
+    text-align: center;
+    font-size: 15px;
+}
+
+.box .articulo p{
+    margin-top: 1.6em;
+    margin-bottom: 1.6em;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+}
+
+.box .articulo p:last-child{
+    border-bottom: none;
+}
+
+/*Create component*/
+
+form{
+    width: 50%;
+}
+
+form label{
+    display: block;
+    width: 50%;
+    font-family: 'Lucida Bright';
+    font-size: 20px;
+    margin: 0;
+}
+
+form input[type="text"],
+form input[type="number"]{
+    min-width: 50%;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+}
+
+form input[type="file"]{
+    font-family: 'Lucida Bright';
+    margin-top: 12px;
+    font-size: 20px;
+    
+}
+
+form button,
+form input[type="submit"]{
+    display: block;
+    font-size: 18px;
+    padding: 8px;
+    cursor: pointer;
+    color: #eee;
+    background: steelblue;
+    border: 1px solid #175282;
+}
+
+form button:hover,
+form input[type="submit"]:hover{
+    background: #175282;
+    border: 1px solid steelblue;
+    transition: 1s;
+}
+
+form input[disabled]{
+    opacity: 0.3;
+}
+
+.valid{
+    font-family: 'Lucida Bright';
+    font-size: 20px;
+    margin-left: 5px;
+    color: red;
+}
+
+.OK h4{
+    width: 27%;
+    padding: 10px;
+    background: green;
+    color: #eee;
+}
+
+.NOK h4{
+    width: 17%;
+    padding: 10px;
+    background: red;
+    color: #eee;
+}
+
+/*Proyects*/
+
+.title-proyects{
+    text-align: center;
+    font-size: 60px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.proyects ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.proyects ul li{
+    width: 48%;
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.proyects img{
+    width: 100%;
+    height: 100%;
+}
+
+.proyects ul li p{
+    text-align: center;
+    margin: 0;
+}
+
+.proyects h2{
+    margin: 0;
+    font-size: 1rem !important;
+}
+
+.proyects ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+/*detail*/
+
+.detail{
+    display: flex;
+}
+
+.information{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 5%;
+}
+
+.detail img{
+    width: 70%;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+.information p{
+    margin: 0;
+    padding: 0;
+}
+
+.info-detail{
+    width: 100%;
+}
+
+.crud{
+    display: flex;
+    flex-direction: column;
+}
+
+.crud a{
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    background: chocolate;
+    text-align: center;
+    border-radius: 5px;
+    width: 80px;
+    padding: 2px;
+    border: 1px solid black;
+}
+
+.crud a:nth-last-child(1){
+    margin-top: 10px;
+    background: rgb(172, 13, 13);
+}
+
+
+/*Pie de pagina*/
+
+.footer{
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: steelblue;
+    color: #eee;
+}
